@@ -126,8 +126,8 @@ export const getAchievement = async (user_id) => {
     }
 };
 
-export const postAchievement = async (user_id, plan_id, distance, points) => {
-    if (!user_id || !plan_id || !distance || !points) {
+export const postAchievement = async (user_id, plan_id, distance) => {
+    if (!user_id || !plan_id || !distance) {
         return {
             "status": false,
             "message": " Please send all needed data"
@@ -143,7 +143,6 @@ export const postAchievement = async (user_id, plan_id, distance, points) => {
                 plan_id,
                 timestamp,
                 distance,
-                points
             }
 
 
@@ -167,3 +166,50 @@ export const postAchievement = async (user_id, plan_id, distance, points) => {
     }
 };
 
+export const getPlans = async () => {
+    try {
+        const data = await fetch('http://localhost:3001/plans/')
+            .then(response => response.json())
+            .then(json => json)
+        
+        if (data.length > 0) {
+            return {
+                status: true,
+                data
+            }
+        } else {
+            return {
+                status: false,
+                message: "No plans found"
+            }
+        }
+
+        } catch (error) {
+            console.error('Error making GET request:', error);
+            throw error; // Re-throw the error to be caught by the caller
+        }
+    };
+
+export const getBadges = async () => {
+    try {
+        const data = await fetch('http://localhost:3001/badges/')
+            .then(response => response.json())
+            .then(json => json)
+        
+        if (data.length > 0) {
+            return {
+                status: true,
+                data
+            }
+        } else {
+            return {
+                status: false,
+                message: "No badges found"
+            }
+        }
+        
+        } catch (error) {
+            console.error('Error making GET request:', error);
+            throw error; // Re-throw the error to be caught by the caller
+        }
+    };
