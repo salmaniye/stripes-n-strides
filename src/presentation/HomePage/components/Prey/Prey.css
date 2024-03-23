@@ -6,7 +6,12 @@
 
 .preyImg {
   position: absolute;
-  width: 35px;
+  width: 55px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid grey;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .preyLink {
@@ -36,4 +41,9 @@
 #preyElephant {
   top: 40vh;
   left: 65vw;
+}
+
+#preyUser {
+  top: 25vh;
+  left: 50vw;
 }

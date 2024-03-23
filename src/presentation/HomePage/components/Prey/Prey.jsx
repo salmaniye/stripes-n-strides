@@ -42,6 +42,11 @@ const PreyHome = () => {
       <Link component="button" onClick={preyClick} className="preyLink">
         <embed src="/prey/zebra.svg" className="preyImg" id="preyZebra"></embed>
       </Link>
+      <embed
+        src="/images/tiger-face-svgrepo-com.svg"
+        className="preyImg"
+        id="preyUser"
+      ></embed>
     </Box>
   );
 };
