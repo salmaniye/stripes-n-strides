@@ -9,23 +9,29 @@ import UserPage from "./presentation/UserPage/pages/UserPage";
 // import PageNotFound from "./presentation/_AuthenticatedLayout/pages/PageNotFound/PageNotFound";
 
 import { GlobalProvider } from "./contexts/GlobalContext";
+import Header from "./common/components/Header/Header";
+import Footer from "./common/components/Footer/Footer";
 
 const App = () => {
   return (
-    <GlobalProvider>
-      <BrowserRouter>
-        <Routes>
-          {/* <Route path="*" element={<PageNotFound />} /> */}
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LandingPage />} />
-          <Route path="/register" element={<LandingPage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/plans" element={<PlanPage />} />
-          <Route path="/history" element={<HistoryPage />} />
-          <Route path="/user" element={<UserPage />} />
-        </Routes>
-      </BrowserRouter>
-    </GlobalProvider>
+    <div className="App">
+      <GlobalProvider>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            {/* <Route path="*" element={<PageNotFound />} /> */}
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<LandingPage />} />
+            <Route path="/register" element={<LandingPage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/plans" element={<PlanPage />} />
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/user" element={<UserPage />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </GlobalProvider>
+    </div>
   );
 };
 

@@ -2,6 +2,10 @@
   background-color: #f58220;
   padding: 1rem;
   height: 88px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 #footer svg {
