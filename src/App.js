@@ -8,20 +8,24 @@ import PlanPage from "./presentation/PlanPage/pages/PlanPage";
 import UserPage from "./presentation/UserPage/pages/UserPage";
 // import PageNotFound from "./presentation/_AuthenticatedLayout/pages/PageNotFound/PageNotFound";
 
+import { GlobalProvider } from "./contexts/GlobalContext";
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* <Route path="*" element={<PageNotFound />} /> */}
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<LandingPage />} />
-        <Route path="/register" element={<LandingPage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/plans" element={<PlanPage />} />
-        <Route path="/history" element={<HistoryPage />} />
-        <Route path="/user" element={<UserPage />} />
-      </Routes>
-    </BrowserRouter>
+    <GlobalProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LandingPage />} />
+          <Route path="/register" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/plans" element={<PlanPage />} />
+          <Route path="/history" element={<HistoryPage />} />
+          <Route path="/user" element={<UserPage />} />
+        </Routes>
+      </BrowserRouter>
+    </GlobalProvider>
   );
 };
 
