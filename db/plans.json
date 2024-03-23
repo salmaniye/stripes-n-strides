@@ -1,0 +1,37 @@
+{
+    "running_plans": [
+      {
+        "plan_id": 1,
+        "name": "Newborn",
+        "description": "Start your journey with the basics. Build up your strength and endurance gradually.",
+        "distance_goal": 10.0,
+        "duration": "2 weeks",
+        "image_url": "https://example.com/newborn_plan_image.png"
+      },
+      {
+        "plan_id": 2,
+        "name": "Cub",
+        "description": "Progress to more challenging runs as you grow stronger. Explore your surroundings and improve your speed.",
+        "distance_goal": 20.0,
+        "duration": "4 weeks",
+        "image_url": "https://example.com/cub_plan_image.png"
+      },
+      {
+        "plan_id": 3,
+        "name": "Adolescent Tiger",
+        "description": "Prepare yourself for the hunt. Train harder and push your limits to become a skilled runner.",
+        "distance_goal": 30.0,
+        "duration": "6 weeks",
+        "image_url": "https://example.com/adolescent_tiger_plan_image.png"
+      },
+      {
+        "plan_id": 4,
+        "name": "Adult Tiger",
+        "description": "Become the apex predator. Master your running skills and conquer any challenge that comes your way.",
+        "distance_goal": 50.0,
+        "duration": "8 weeks",
+        "image_url": "https://example.com/adult_tiger_plan_image.png"
+      }
+    ]
+  }
+  

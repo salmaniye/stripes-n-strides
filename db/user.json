@@ -1,0 +1,29 @@
+{
+    "users": [
+      {
+        "UserID": 1,
+        "Username": "runner_01",
+        "Email": "runner01@example.com",
+        "FirstName": "Alice",
+        "LastName": "Smith",
+        "RegistrationDate": "2023-07-15"
+      },
+      {
+        "UserID": 2,
+        "Username": "jogger_02",
+        "Email": "jogger02@example.com",
+        "FirstName": "Bob",
+        "LastName": "Johnson",
+        "RegistrationDate": "2023-08-20"
+      },
+      {
+        "UserID": 3,
+        "Username": "runningfanatic_03",
+        "Email": "running03@example.com",
+        "FirstName": "Eva",
+        "LastName": "Brown",
+        "RegistrationDate": "2023-09-10"
+      }
+    ]
+  }
+  
