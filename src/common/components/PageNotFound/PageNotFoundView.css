@@ -1,0 +1,13 @@
+#pnf_stack {
+  min-height: 100vh;
+  padding: 1rem;
+  text-align: center;
+}
+
+#pnf_h3 {
+  font-weight: bold;
+}
+
+#pnf_h6 {
+  margin: 5rem 0;
+}
