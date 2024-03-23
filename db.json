@@ -1,0 +1,180 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "email": "runner01@example.com",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "registration_date": "2023-07-15",
+        "location": {
+          "Latitude": 37.7749,
+          "Longitude": -122.4194
+        }, 
+        "badges": [1,2]
+      },
+      {
+        "id": 2,
+        "email": "jogger02@example.com",
+        "first_name": "Bob",
+        "last_name": "Johnson",
+        "registration_date": "2023-08-20",
+        "location": {
+          "Latitude": 40.7128,
+          "Longitude": -74.0060
+        }, 
+        "badges": [1,2,3]
+      },
+      {
+        "id": 3,
+        "email": "running03@example.com",
+        "first_name": "Eva",
+        "last_name": "Copley",
+        "registration_date": "2023-09-10",
+        "location": {
+          "Latitude": 34.0522,
+          "Longitude": -118.2437
+        }, 
+        "badges": [1,2,3,4]
+      }
+    ],
+    "achievements": [
+      {
+        "id": 1,
+        "user_id": 1,
+        "plan_id": 1,
+        "timestamp": "2024-03-22T08:30:00",
+        "distance": 5.0,
+        "points": 50
+      },
+      {
+        "id": 2,
+        "user_id": 1,
+        "plan_id": 1,
+        "timestamp": "2024-03-24T09:15:00",
+        "distance": 10.0,
+        "points": 100
+      },
+      {
+        "id": 3,
+        "user_id": 2,
+        "plan_id": 2,
+        "timestamp": "2024-03-25T07:45:00",
+        "distance": 7.0,
+        "points": 70
+      },
+      {
+        "id": 4,
+        "user_id": 3,
+        "plan_id": 3,
+        "timestamp": "2024-03-23T18:00:00",
+        "distance": 15.0,
+        "points": 150
+      }
+    ],
+    "badges": [
+      {
+        "id": 1,
+        "name": "Beginner Runner",
+        "description": "Awarded to users who accumulate at least 100 points.",
+        "required_points": 100,
+        "image_url": "badges/beginner.svg"
+      },
+      {
+        "id": 2,
+        "name": "Intermediate Runner",
+        "description": "Awarded to users who accumulate at least 500 points.",
+        "required_points": 500,
+        "image_url": "badges/intermediate.svg"
+      },
+      {
+        "id": 3,
+        "name": "Advanced Runner",
+        "description": "Awarded to users who accumulate at least 1000 points.",
+        "required_points": 1000,
+        "image_url": "badges/advanced.svg"
+      },
+      {
+        "id": 4,
+        "name": "Expert Runner",
+        "description": "Awarded to users who accumulate at least 2000 points.",
+        "required_points": 2000,
+        "image_url": "badges/expert.svg"
+      }
+    ],
+    "challenges": [
+        {
+        "id": 1,
+        "prey_type": "Rabbit",
+        "distance": 2.0,
+        "description": "Hunt a rabbit by running 5 kilometers.",
+        "image_url": "prey/rabbit.svg"
+      },
+      {
+        "id": 2,
+        "prey_type": "Zebra",
+        "distance": 5.0,
+        "description": "Hunt a Zebra by running 5 kilometers.",
+        "image_url": "prey/zebra.svg"
+      },
+      {
+        "id": 3,
+        "prey_type": "Gazelle",
+        "distance": 7.0,
+        "description": "Chase down a gazelle by running 7 kilometers.",
+        "image_url": "prey/gazelle.svg"
+      },
+      {
+        "id": 4,
+        "prey_type": "Buffalo",
+        "distance": 10.0,
+        "description": "Track and hunt a zebra by running 10 kilometers.",
+        "image_url": "prey/buffalo.svg"
+      },
+      {
+        "id": 5,
+        "prey_type": "Elephant",
+        "distance": 21.09,
+        "description": "Track and hunt a zebra by running 21.09 kilometers.",
+        "image_url": "prey/elephant.svg"
+      }
+    ],
+    "plans": [
+      {
+        "id": 1,
+        "name": "Newborn",
+        "level": "Beginner",
+        "description": "Start your journey with the basics. Build up your strength and endurance gradually.",
+        "distance_goal": 10.0,
+        "duration": "2 weeks",
+        "image_url": "plans/newborn.svg"
+      },
+      {
+        "id": 2,
+        "name": "Cub",
+        "level": "Intermediate",
+        "description": "Progress to more challenging runs as you grow stronger. Explore your surroundings and improve your speed.",
+        "distance_goal": 20.0,
+        "duration": "4 weeks",
+        "image_url": "plans/cub.svg"
+      },
+      {
+        "id": 3,
+        "name": "Adolescent Tiger",
+        "level": "Advanced",
+        "description": "Prepare yourself for the hunt. Train harder and push your limits to become a skilled runner.",
+        "distance_goal": 30.0,
+        "duration": "6 weeks",
+        "image_url": "plans/adolescent.svg"
+      },
+      {
+        "id": 4,
+        "name": "Adult Tiger",
+        "level": "Expert",
+        "description": "Become the apex predator. Master your running skills and conquer any challenge that comes your way.",
+        "distance_goal": 50.0,
+        "duration": "8 weeks",
+        "image_url": "plans/adult.svg"
+      }
+    ]
+  }
+  
