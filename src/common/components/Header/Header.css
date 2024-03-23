@@ -7,7 +7,7 @@ header {
   padding: 0.25rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2.5px;
   height: 88px;
   position: fixed;
@@ -21,8 +21,15 @@ header > h1 {
   font-size: 26px;
 }
 
-header > img {
+header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header > div > img {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 55px;
+  height: 55px;
 }
