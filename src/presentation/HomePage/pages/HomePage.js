@@ -1,8 +1,12 @@
 import { Stack } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../../contexts/GlobalContext";
 
 const HomePage = () => {
-  return <Stack>HomePage</Stack>;
+  const { user } = useContext(GlobalContext);
+  return (
+    <Stack>From Globalcontext: {user.firstName + " " + user.lastName}</Stack>
+  );
 };
 
 export default HomePage;
