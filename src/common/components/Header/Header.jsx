@@ -7,9 +7,9 @@ const Header = () => {
   const { user } = useContext(GlobalContext);
 
   return (
-    <header>
+    <>
       {user ? (
-        <>
+        <header>
           <h1 style={{ fontFamily: "Open Sans" }}>{user.firstName}</h1>
           <div>
             {user.badge && (
@@ -17,11 +17,13 @@ const Header = () => {
             )}
             <img src={user.avatarUrl} alt={`${user.firstName} avatar`} />
           </div>
-        </>
+        </header>
       ) : (
-        <h1 style={{ fontSize: "32px" }}>Stripes n Strides</h1>
+        <header style={{ justifyContent: "center" }}>
+          <h1 style={{ fontSize: "32px" }}>Stripes n Strides</h1>
+        </header>
       )}
-    </header>
+    </>
   );
 };
 
