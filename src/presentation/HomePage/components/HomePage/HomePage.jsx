@@ -3,6 +3,7 @@ import React from "react";
 
 import "./HomePage.css";
 import MapHome from "../Map/Map";
+import PreyHome from "../Prey/Prey";
 
 const HomePage = ({ reference }) => {
   return (
@@ -15,6 +16,7 @@ const HomePage = ({ reference }) => {
       }}
     >
       <MapHome />
+      <PreyHome />
     </Stack>
   );
 };
