@@ -1,27 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
 
-  
+import HistoryPage from "./presentation/HistoryPage/pages/HistoryPage";
+import HomePage from "./presentation/HomePage/pages/HomePage";
+import LandingPage from "./presentation/LandingPage/pages/LandingPage";
+import PlanPage from "./presentation/PlanPage/pages/PlanPage";
+import UserPage from "./presentation/UserPage/pages/UserPage";
+// import PageNotFound from "./presentation/_AuthenticatedLayout/pages/PageNotFound/PageNotFound";
+
+import { GlobalProvider } from "./contexts/GlobalContext";
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LandingPage />} />
+          <Route path="/register" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/plans" element={<PlanPage />} />
+          <Route path="/history" element={<HistoryPage />} />
+          <Route path="/user" element={<UserPage />} />
+        </Routes>
+      </BrowserRouter>
+    </GlobalProvider>
   );
-}
+};
 
 export default App;
