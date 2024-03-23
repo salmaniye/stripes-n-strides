@@ -1,12 +1,14 @@
 import { Stack } from "@mui/material";
-import React from "react";
-import Footer from "../../../common/components/Footer/Footer";
+import React, { useContext } from "react";
+
+import Header from "../../../common/components/Header/Header.jsx";
+import { GlobalContext } from "../../../contexts/GlobalContext";
 
 const LandingPage = () => {
+  const { user } = useContext(GlobalContext);
   return (
     <Stack>
-      LandingPage
-      <Footer />
+      <Header user={user} />
     </Stack>
   );
 };
