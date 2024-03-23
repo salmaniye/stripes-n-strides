@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+
 import HistoryPage from "./presentation/HistoryPage/pages/HistoryPage";
 import HomePage from "./presentation/HomePage/pages/HomePage";
 import LandingPage from "./presentation/LandingPage/pages/LandingPage";
@@ -11,6 +12,7 @@ import UserPage from "./presentation/UserPage/pages/UserPage";
 import { GlobalProvider } from "./contexts/GlobalContext";
 
 const App = () => {
+
   return (
     <GlobalProvider>
       <BrowserRouter>
