@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, Link } from "@mui/material";
 import React, { useContext } from "react";
 import { FaHome, FaHistory } from "react-icons/fa";
 import { FaStairs } from "react-icons/fa6";
@@ -7,9 +7,16 @@ import { BiLogOut } from "react-icons/bi";
 import "./Footer.css";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../../contexts/GlobalContext";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  const { user } = useContext(GlobalContext);
+  const { user, setUser } = useContext(GlobalContext);
+  const navigate = useNavigate();
+
+  const logoutAndRedirect = () => {
+    setUser(null);
+    navigate("/login");
+  };
 
   return (
     <>
@@ -38,12 +45,9 @@ const Footer = () => {
           >
             <FaHistory />
           </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? "activeLink" : "")}
-            to={"/login"}
-          >
+          <Link className="cursor-hover" onClick={logoutAndRedirect}>
             <BiLogOut />
-          </NavLink>
+          </Link>
         </Stack>
       )}
     </>
