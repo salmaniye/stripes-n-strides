@@ -1,37 +1,44 @@
 {
-    "achievements": [
-      {
-        "user_id": 1,
-        "plan_id": 1,
-        "challenge_id": 101,
-        "timestamp": "2024-03-22T08:30:00",
-        "distance": 5.0,
-        "points": 50
-      },
-      {
-        "user_id": 1,
-        "plan_id": 1,
-        "challenge_id": 101,
-        "timestamp": "2024-03-24T09:15:00",
-        "distance": 10.0,
-        "points": 100
-      },
-      {
-        "user_id": 2,
-        "plan_id": 2,
-        "challenge_id": 102,
-        "timestamp": "2024-03-25T07:45:00",
-        "distance": 7.0,
-        "points": 70
-      },
-      {
-        "user_id": 3,
-        "plan_id": 3,
-        "challenge_id": 103,
-        "timestamp": "2024-03-23T18:00:00",
-        "distance": 15.0,
-        "points": 150
-      }
-    ]
-  }
-  
+  "achievements": [
+    {
+      "user_id": 1,
+      "plan_id": 1,
+      "challenge_id": 101,
+      "timestamp": "2024-03-22T08:30:00",
+      "distance": 5.0,
+      "points": 50
+    },
+    {
+      "user_id": 1,
+      "plan_id": 1,
+      "challenge_id": 101,
+      "timestamp": "2024-03-24T09:15:00",
+      "distance": 10.0,
+      "points": 100
+    },
+    {
+      "user_id": 1,
+      "plan_id": 1,
+      "challenge_id": 102,
+      "timestamp": "2024-03-21T09:15:00",
+      "distance": 7.0,
+      "points": 100
+    },
+    {
+      "user_id": 2,
+      "plan_id": 2,
+      "challenge_id": 102,
+      "timestamp": "2024-03-25T07:45:00",
+      "distance": 7.0,
+      "points": 70
+    },
+    {
+      "user_id": 3,
+      "plan_id": 3,
+      "challenge_id": 103,
+      "timestamp": "2024-03-23T18:00:00",
+      "distance": 15.0,
+      "points": 150
+    }
+  ]
+}

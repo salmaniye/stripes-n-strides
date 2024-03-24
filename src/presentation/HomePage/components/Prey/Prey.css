@@ -1,0 +1,49 @@
+#preyContainer {
+  width: 100dvw;
+  height: 50dvh;
+  position: absolute;
+}
+
+.preyImg {
+  position: absolute;
+  width: 55px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid grey;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.preyLink {
+  cursor: pointer;
+}
+
+#preyRabbit {
+  top: 20vh;
+  left: 35vw;
+}
+
+#preyGazelle {
+  top: 15vh;
+  left: 65vw;
+}
+
+#preyZebra {
+  top: 32vh;
+  left: 50vw;
+}
+
+#preyBuffalo {
+  top: 10vh;
+  left: 20vw;
+}
+
+#preyElephant {
+  top: 40vh;
+  left: 65vw;
+}
+
+#preyUser {
+  top: 22vh;
+  left: 50vw;
+}

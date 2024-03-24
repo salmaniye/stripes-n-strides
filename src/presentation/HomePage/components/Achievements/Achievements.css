@@ -1,0 +1,17 @@
+.AchImg {
+  width: 55px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid grey;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.AchContainer {
+  background-color: #c6c6c6;
+  padding: 2px;
+  margin: 10px;
+  border-radius: 15px;
+  height: 8vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
