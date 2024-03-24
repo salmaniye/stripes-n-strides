@@ -28,7 +28,7 @@ const Hungar = () => {
         id="hungarBar"
         sx={{ width: `${hungerTotal}%` }}
       >
-        Hungar
+        Hunger
       </Stack>
     </Box>
   );
