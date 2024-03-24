@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getPlans } from "../../../utils/apiEndpoints";
+import "./PlanPage.css";
 
 const PlanPage = () => {
   const [plans, setPlans] = useState([]);
@@ -48,6 +49,7 @@ const PlanPage = () => {
       {plans.map((plan) => (
         <div
           key={plan.id}
+          className="plan-card"
           style={{
             position: "relative",
             display: "flex",
@@ -80,8 +82,6 @@ const PlanPage = () => {
             style={{
               height: "50px",
               objectFit: "cover",
-              borderTopRightRadius: "5px",
-              borderBottomRightRadius: "5px",
               position: "absolute",
               bottom: "5px",
               right: "5px",
