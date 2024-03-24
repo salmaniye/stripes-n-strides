@@ -1,0 +1,22 @@
+#hungarFull {
+  width: 95dvw;
+  height: 5dvh;
+  background-color: firebrick;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#hungarBar {
+  position: absolute;
+  top: 88px;
+  min-width: 30dvw;
+  height: 5dvh;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+}

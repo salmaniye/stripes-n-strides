@@ -12,6 +12,7 @@ import {
 import AchievementsHome from "../Achievements/Achievements";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import Pursuit from "../Pursuit/Pursuit";
+import Hungar from "../Hungar/Hungar";
 
 const HomePage = () => {
   const [achievements, setAchievements] = useState([]);
@@ -61,6 +62,7 @@ const HomePage = () => {
 
   return (
     <Stack
+      alignItems={"center"}
       sx={{
         height: "calc(100vh - 176px)",
         maxHeight: "calc(100vh - 176px)",
@@ -74,6 +76,7 @@ const HomePage = () => {
         </>
       ) : (
         <>
+          <Hungar />
           <MapHome />
           <PreyHome startPursuit={startPursuit} preyIcon={showPursuit} />
           {achievements &&
