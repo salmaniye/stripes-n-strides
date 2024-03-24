@@ -94,28 +94,6 @@
       "image_url": "prey/buffalo.svg",
       "distance": 10,
       "timestamp": "2024-03-23T19:12:18.063Z"
-    },
-    {
-      "id": "9fe0",
-      "user_id": "1",
-      "plan_id": "1",
-      "plan_name": "Beginner",
-      "challenge_id": "1",
-      "prey_type": "Rabbit",
-      "image_url": "prey/rabbit.svg",
-      "distance": 2,
-      "timestamp": "2024-03-24T08:38:46.311Z"
-    },
-    {
-      "id": "7356",
-      "user_id": "1",
-      "plan_id": "1",
-      "plan_name": "Beginner",
-      "challenge_id": "2",
-      "prey_type": "Zebra",
-      "image_url": "prey/zebra.svg",
-      "distance": 5,
-      "timestamp": "2024-03-24T08:39:59.098Z"
     }
   ],
   "badges": [

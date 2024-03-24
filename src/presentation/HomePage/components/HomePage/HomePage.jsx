@@ -68,11 +68,14 @@ const HomePage = () => {
       }}
     >
       {showPursuit ? (
-        <Pursuit challenge={challenge} endPursuit={endPursuit} />
+        <>
+          <Pursuit challenge={challenge} endPursuit={endPursuit} />
+          <PreyHome startPursuit={startPursuit} preyIcon={showPursuit} />
+        </>
       ) : (
         <>
           <MapHome />
-          <PreyHome startPursuit={startPursuit} />
+          <PreyHome startPursuit={startPursuit} preyIcon={showPursuit} />
           {achievements &&
             achievements.map((a, i) => (
               <AchievementsHome props={a} key={`Achievments_${i}`} />
