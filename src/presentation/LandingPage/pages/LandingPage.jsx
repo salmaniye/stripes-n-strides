@@ -25,10 +25,11 @@ const LandingPage = () => {
       const res = await login(email);
 
       setUser({
-        user_id: res.data.id,
+        user_id: +res.data.id,
         firstName: res.data.first_name,
         lastName: res.data.last_name,
         email: res.data.email,
+        avatarUrl: res.data.avatarUrl,
       });
       setMessage(res.message);
       setIsRegistering(!isRegistering);
