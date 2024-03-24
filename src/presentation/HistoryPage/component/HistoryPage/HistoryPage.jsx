@@ -57,7 +57,7 @@ const HistoryPage = () => {
             </Typography>
             <Typography variant="h5">Distance:</Typography>
             <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-              {distanceTotal}
+              {distanceTotal}Km
             </Typography>
           </Stack>
           {achievements.map((a, i) => (

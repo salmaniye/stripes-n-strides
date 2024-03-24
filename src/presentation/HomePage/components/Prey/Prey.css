@@ -49,3 +49,14 @@
   left: 45vw;
   background-color: greenyellow;
 }
+
+#preyUserP {
+  top: 15vh;
+  left: 55vw;
+  background-color: greenyellow;
+}
+
+#preyZebraP {
+  top: 35vh;
+  left: 45vw;
+}
