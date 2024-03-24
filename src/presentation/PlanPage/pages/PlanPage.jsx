@@ -81,7 +81,7 @@ const PlanPage = () => {
               <p style={{ color: getLevelColor(plan.level) }}>
                 Level: {plan.level}
               </p>
-              <p>Distance Goal: {plan.distance_goal}km</p>
+              <p>Distance Goal: {plan.points_goal}km</p>
             </div>
           </div>
           <img
