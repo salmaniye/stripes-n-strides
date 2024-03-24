@@ -1,0 +1,6 @@
+.main-container {
+  margin-top: 88px;
+  background-color: red;
+  height: "calc(100vh - 176px)";
+  width: 100%;
+}
