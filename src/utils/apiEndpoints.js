@@ -223,3 +223,29 @@ export const getChallenge = async (id) => {
     throw error; // Re-throw the error to be caught by the caller
   }
 };
+
+export const getHungar = async (user_id, plan_id) => {
+  try {
+    const plans = await fetch(`http://localhost:3001/plans`)
+      .then((response) => response.json())
+      .then((json) => json);
+    const { points_goal } = plans.filter((p) => p.id === plan_id)[0];
+
+    const { data: achievements } = await getAchievement(user_id);
+
+    if (achievements) {
+      return {
+        status: true,
+        percentage: (achievements.length / points_goal) * 100,
+      };
+    } else {
+      return {
+        status: false,
+        message: "No challenge found",
+      };
+    }
+  } catch (error) {
+    console.error("Error making GET request:", error);
+    throw error; // Re-throw the error to be caught by the caller
+  }
+};

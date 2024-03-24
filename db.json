@@ -94,6 +94,28 @@
       "image_url": "prey/buffalo.svg",
       "distance": 10,
       "timestamp": "2024-03-23T19:12:18.063Z"
+    },
+    {
+      "id": "921d",
+      "user_id": "1",
+      "plan_id": "1",
+      "plan_name": "Beginner",
+      "challenge_id": "3",
+      "prey_type": "Gazelle",
+      "image_url": "prey/gazelle.svg",
+      "distance": 7,
+      "timestamp": "2024-03-24T10:38:59.456Z"
+    },
+    {
+      "id": "2609",
+      "user_id": "1",
+      "plan_id": "1",
+      "plan_name": "Beginner",
+      "challenge_id": "2",
+      "prey_type": "Zebra",
+      "image_url": "prey/zebra.svg",
+      "distance": 5,
+      "timestamp": "2024-03-24T10:39:55.933Z"
     }
   ],
   "badges": [
@@ -176,7 +198,7 @@
       "name": "Newborn",
       "level": "Beginner",
       "description": "Start your journey with the basics. Build up your strength and endurance gradually.",
-      "distance_goal": 10,
+      "points_goal": 10,
       "image_url": "plans/newborn.svg"
     },
     {
@@ -184,7 +206,7 @@
       "name": "Cub",
       "level": "Intermediate",
       "description": "Progress to more challenging runs as you grow stronger. Explore your surroundings and improve your speed.",
-      "distance_goal": 20,
+      "points_goal": 20,
       "image_url": "plans/cub.svg"
     },
     {
@@ -192,7 +214,7 @@
       "name": "Adolescent Tiger",
       "level": "Advanced",
       "description": "Prepare yourself for the hunt. Train harder and push your limits to become a skilled runner.",
-      "distance_goal": 30,
+      "points_goal": 30,
       "image_url": "plans/adolescent.svg"
     },
     {
@@ -200,7 +222,7 @@
       "name": "Adult Tiger",
       "level": "Expert",
       "description": "Become the apex predator. Master your running skills and conquer any challenge that comes your way.",
-      "distance_goal": 50,
+      "points_goal": 50,
       "image_url": "plans/adult.svg"
     }
   ]
