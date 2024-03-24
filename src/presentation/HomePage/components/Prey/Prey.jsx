@@ -4,49 +4,79 @@ import "./Prey.css";
 import { Box } from "@mui/system";
 import { Link } from "@mui/material";
 
-const PreyHome = () => {
-  const preyClick = () => {
-    console.log("prey");
+const PreyHome = ({ startPursuit }) => {
+  const preyClick = (prey) => {
+    startPursuit(prey);
   };
 
   return (
     <Box id="preyContainer">
-      <Link component="button" onClick={preyClick} className="preyLink">
-        <embed
+      <Link
+        component="button"
+        onClick={() => preyClick(1)}
+        className="preyLink"
+      >
+        <img
           src="/prey/rabbit.svg"
           className="preyImg"
           id="preyRabbit"
-        ></embed>
+          alt="Rabbit"
+        />
       </Link>
-      <Link component="button" onClick={preyClick} className="preyLink">
-        <embed
+      <Link
+        component="button"
+        onClick={() => preyClick(4)}
+        className="preyLink"
+      >
+        <img
           src="/prey/buffalo.svg"
           className="preyImg"
           id="preyBuffalo"
-        ></embed>
+          alt="Buffalo"
+        />
       </Link>
-      <Link component="button" onClick={preyClick} className="preyLink">
-        <embed
+      <Link
+        component="button"
+        onClick={() => preyClick(5)}
+        className="preyLink"
+      >
+        <img
           src="/prey/elephant.svg"
           className="preyImg"
           id="preyElephant"
-        ></embed>
+          alt="Elephant"
+        />
       </Link>
-      <Link component="button" onClick={preyClick} className="preyLink">
-        <embed
+      <Link
+        component="button"
+        onClick={() => preyClick(2)}
+        className="preyLink"
+      >
+        <img
           src="/prey/gazelle.svg"
           className="preyImg"
           id="preyGazelle"
-        ></embed>
+          alt="Gazelle"
+        />
       </Link>
-      <Link component="button" onClick={preyClick} className="preyLink">
-        <embed src="/prey/zebra.svg" className="preyImg" id="preyZebra"></embed>
+      <Link
+        component="button"
+        onClick={() => preyClick(3)}
+        className="preyLink"
+      >
+        <img
+          src="/prey/zebra.svg"
+          className="preyImg"
+          id="preyZebra"
+          alt="Zebra"
+        />
       </Link>
-      <embed
+      <img
         src="/images/tiger-face-svgrepo-com.svg"
         className="preyImg"
         id="preyUser"
-      ></embed>
+        alt="User"
+      />
     </Box>
   );
 };

@@ -192,3 +192,26 @@ export const getBadges = async () => {
     throw error; // Re-throw the error to be caught by the caller
   }
 };
+
+export const getChallenge = async (id) => {
+  try {
+    const data = await fetch(`http://localhost:3001/challenges/${id}`)
+      .then((response) => response.json())
+      .then((json) => json);
+
+    if (data) {
+      return {
+        status: true,
+        data,
+      };
+    } else {
+      return {
+        status: false,
+        message: "No challenge found",
+      };
+    }
+  } catch (error) {
+    console.error("Error making GET request:", error);
+    throw error; // Re-throw the error to be caught by the caller
+  }
+};

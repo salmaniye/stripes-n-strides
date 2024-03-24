@@ -5,7 +5,7 @@ import "./Achievements.css";
 
 const AchievementsHome = ({ props, key }) => {
   const { icon, achievement, date } = props;
-  console.log(props);
+
   return (
     <Stack
       key={key}
@@ -16,7 +16,7 @@ const AchievementsHome = ({ props, key }) => {
     >
       <embed src={icon} className="AchImg"></embed>
       <Typography>{achievement}</Typography>
-      <Typography>{date}</Typography>
+      <Typography>{new Date(date).toLocaleDateString("en-GB")}</Typography>
     </Stack>
   );
 };

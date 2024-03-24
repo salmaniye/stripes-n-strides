@@ -14,7 +14,8 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.preyLink {
+.preyLink,
+.preyLink:hover > * {
   cursor: pointer;
 }
 
@@ -45,5 +46,5 @@
 
 #preyUser {
   top: 22vh;
-  left: 50vw;
+  left: 45vw;
 }
