@@ -1,5 +1,7 @@
 import { Stack, Box, Button, TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../../../contexts/GlobalContext";
+import { useNavigate } from "react-router-dom";
 
 import { register, login } from "../../../utils/apiEndpoints";
 
@@ -11,18 +13,26 @@ const LandingPage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [message, setMessage] = useState(null);
+  const { setUser } = useContext(GlobalContext);
+  const navigate = useNavigate();
 
   const handleClick = async () => {
     if (isRegistering) {
       const res = await register(email, firstName, lastName);
-
       setMessage(res.message);
       setIsRegistering(!isRegistering);
     } else {
       const res = await login(email);
 
+      setUser({
+        user_id: res.data.id,
+        firstName: res.data.first_name,
+        lastName: res.data.last_name,
+        email: res.data.email,
+      });
       setMessage(res.message);
       setIsRegistering(!isRegistering);
+      navigate("/home");
     }
   };
 
