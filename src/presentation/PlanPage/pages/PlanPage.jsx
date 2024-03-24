@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { getPlans } from "../../../utils/apiEndpoints";
 import "./PlanPage.css";
+import { GlobalContext } from "../../../contexts/GlobalContext";
 
 const PlanPage = () => {
   const [plans, setPlans] = useState([]);
+  const { user, setUser } = useContext(GlobalContext);
 
   useEffect(() => {
     const fetchPlans = async () => {
@@ -34,6 +36,10 @@ const PlanPage = () => {
     }
   };
 
+  const handlePlanSelection = (planId) => {
+    setUser({ ...user, plan_id: planId });
+  };
+
   return (
     <div
       style={{
@@ -56,7 +62,9 @@ const PlanPage = () => {
             border: "1px solid #ccc",
             borderRadius: "5px",
             marginBottom: "10px",
+            backgroundColor: user.plan_id === plan.id ? "#e6f7ff" : "white", // Conditional styling
           }}
+          onClick={() => handlePlanSelection(plan.id)} // onClick event
         >
           <div
             style={{
