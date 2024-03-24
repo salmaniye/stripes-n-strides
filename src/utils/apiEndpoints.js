@@ -224,7 +224,7 @@ export const getChallenge = async (id) => {
   }
 };
 
-export const getHungar = async (user_id, plan_id) => {
+export const getHunger = async (user_id, plan_id) => {
   try {
     const plans = await fetch(`http://localhost:3001/plans`)
       .then((response) => response.json())

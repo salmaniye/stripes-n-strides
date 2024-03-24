@@ -12,7 +12,7 @@ import {
 import AchievementsHome from "../Achievements/Achievements";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import Pursuit from "../Pursuit/Pursuit";
-import Hungar from "../Hungar/Hungar";
+import Hunger from "../Hunger/Hunger";
 
 const HomePage = () => {
   const [achievements, setAchievements] = useState([]);
@@ -76,7 +76,7 @@ const HomePage = () => {
         </>
       ) : (
         <>
-          <Hungar />
+          <Hunger />
           <MapHome />
           <PreyHome startPursuit={startPursuit} preyIcon={showPursuit} />
           {achievements &&

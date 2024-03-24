@@ -1,16 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import "./Hungar.css";
+import "./Hunger.css";
 import { Stack, Box } from "@mui/material";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
-import { getHungar } from "../../../../utils/apiEndpoints";
+import { getHunger } from "../../../../utils/apiEndpoints";
 
 const Hungar = () => {
   const [hungerTotal, setHungerTotal] = useState(0);
   const { user } = useContext(GlobalContext);
 
   const hungar = async () => {
-    const res = await getHungar(user.user_id, user.plan_id);
+    const res = await getHunger(user.user_id, user.plan_id);
     setHungerTotal(res.percentage);
   };
 

@@ -12,7 +12,6 @@
 #hungarBar {
   position: absolute;
   top: 88px;
-  min-width: 30dvw;
   height: 5dvh;
   background-color: green;
   color: white;
