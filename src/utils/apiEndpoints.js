@@ -92,6 +92,10 @@ export const getAchievement = async (user_id) => {
 
       const userAchievements = getUserAchievements(user_id, data);
 
+      userAchievements.sort(
+        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+      );
+
       if (userAchievements.length > 0) {
         return {
           status: true,
@@ -110,8 +114,8 @@ export const getAchievement = async (user_id) => {
   }
 };
 
-export const postAchievement = async (user_id, plan_id, distance) => {
-  if (!user_id || !plan_id || !distance) {
+export const postAchievement = async (user_id, challenge) => {
+  if (!user_id || !challenge) {
     return {
       status: false,
       message: " Please send all needed data",
@@ -123,9 +127,13 @@ export const postAchievement = async (user_id, plan_id, distance) => {
 
       const postData = {
         user_id,
-        plan_id,
+        plan_id: challenge.plan_id,
+        plan_name: challenge.plan_name,
+        challenge_id: challenge.id,
+        prey_type: challenge.prey_type,
+        image_url: challenge.image_url,
+        distance: +challenge.distance,
         timestamp,
-        distance,
       };
 
       const res = await fetch("http://localhost:3001/achievements/", {
