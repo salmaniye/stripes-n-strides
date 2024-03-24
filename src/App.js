@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HistoryPage from "./presentation/HistoryPage/pages/HistoryPage";
+import HistoryPageView from "./presentation/HistoryPage/pages/HistoryPageView";
 import HomePageView from "./presentation/HomePage/pages/HomePageView";
 import LandingPage from "./presentation/LandingPage/pages/LandingPage";
 import PlanPage from "./presentation/PlanPage/pages/PlanPage";
@@ -25,7 +25,7 @@ const App = () => {
             <Route path="/register" element={<LandingPage />} />
             <Route path="/home" element={<HomePageView />} />
             <Route path="/plans" element={<PlanPage />} />
-            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/history" element={<HistoryPageView />} />
             <Route path="/user" element={<UserPage />} />
           </Routes>
           <Footer />
