@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 import "./Pursuit.css";
-import { Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 
-const Pursuit = ({ challenge }) => {
+const Pursuit = ({ challenge, endPursuit }) => {
   const [timer, setTimer] = useState(0);
   const [displayTime, setDisplayTime] = useState("");
+
+  const completeChallenge = () => {
+    endPursuit();
+  };
 
   useEffect(() => {
     const interval = setTimeout(() => {
@@ -18,6 +22,7 @@ const Pursuit = ({ challenge }) => {
       clearTimeout(interval);
     };
   }, [timer]);
+
   return (
     <>
       <iframe
@@ -34,9 +39,9 @@ const Pursuit = ({ challenge }) => {
           justifyContent={"space-evenly"}
           alignItems={"center"}
         >
-          <Typography variant="h3">Challenge</Typography>
+          <Typography variant="h5">Challenge</Typography>
           <Typography
-            variant="h4"
+            variant="h5"
             sx={{ fontWeight: "bold", color: "#F58220" }}
           >
             {challenge.prey_type}
@@ -47,17 +52,20 @@ const Pursuit = ({ challenge }) => {
           justifyContent={"space-evenly"}
           alignItems={"center"}
         >
-          <Typography variant="h3">Distance</Typography>
+          <Typography variant="h5">Distance</Typography>
           <Typography
-            variant="h4"
+            variant="h5"
             sx={{ fontWeight: "bold", color: "#F58220" }}
           >
             {challenge.distance}Km
           </Typography>
         </Stack>
-        <Typography variant="h2" sx={{ textAlign: "center", color: "green" }}>
+        <Typography variant="h4" sx={{ textAlign: "center", color: "green" }}>
           {displayTime}
         </Typography>
+        <Button variant="contained" color="error" onClick={completeChallenge}>
+          Confirm Kill
+        </Button>
       </Stack>
     </>
   );

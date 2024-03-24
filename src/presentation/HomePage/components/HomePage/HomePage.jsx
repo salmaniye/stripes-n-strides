@@ -4,7 +4,11 @@ import React, { useContext, useEffect, useState } from "react";
 import "./HomePage.css";
 import MapHome from "../Map/Map";
 import PreyHome from "../Prey/Prey";
-import { getAchievement, getChallenge } from "../../../../utils/apiEndpoints";
+import {
+  getAchievement,
+  getChallenge,
+  postAchievement,
+} from "../../../../utils/apiEndpoints";
 import AchievementsHome from "../Achievements/Achievements";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import Pursuit from "../Pursuit/Pursuit";
@@ -16,6 +20,7 @@ const HomePage = () => {
   const { user } = useContext(GlobalContext);
 
   const getAchievements = async () => {
+    setAchievements([]);
     if (user.user_id) {
       const res = await getAchievement(user.user_id);
 
@@ -40,6 +45,16 @@ const HomePage = () => {
     setShowPursuit(true);
   };
 
+  const endPursuit = async () => {
+    await postAchievement(user.user_id, {
+      ...challenge,
+      plan_id: user.plan_id,
+      plan_name: user.plan_name,
+    });
+    getAchievements();
+    setShowPursuit(false);
+  };
+
   useEffect(() => {
     user.user_id && getAchievements();
   }, [user]);
@@ -53,7 +68,7 @@ const HomePage = () => {
       }}
     >
       {showPursuit ? (
-        <Pursuit challenge={challenge} />
+        <Pursuit challenge={challenge} endPursuit={endPursuit} />
       ) : (
         <>
           <MapHome />

@@ -49,7 +49,7 @@ const PreyHome = ({ startPursuit }) => {
       </Link>
       <Link
         component="button"
-        onClick={() => preyClick(2)}
+        onClick={() => preyClick(3)}
         className="preyLink"
       >
         <img
@@ -61,7 +61,7 @@ const PreyHome = ({ startPursuit }) => {
       </Link>
       <Link
         component="button"
-        onClick={() => preyClick(3)}
+        onClick={() => preyClick(2)}
         className="preyLink"
       >
         <img
