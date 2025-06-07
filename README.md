@@ -13,5 +13,5 @@ Special thanks to my team members:
 - **Jim** - for frontend UI design expertise  
 - **Justin** - for collaboration and expanding the initial idea
 
-And also from PageTiger:
+And also to PageTiger:
 - **Andrew** - for the PageTiger office tour
